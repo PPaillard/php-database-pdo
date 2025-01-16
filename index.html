@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PDO - PHP Data Objects</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="has-toc">
+    <header>
+      <div>
+        <h1>PDO - PHP Data Objects</h1>
+
+        <p>Connexion à une BDD en PHP</p>
+      </div>
+    </header>
+
+    <nav id="toc-nav">
+      <ol>
+        <li>
+          <a href="#creer-et-lire-des-enregistrements-en-bdd"
+            >Créer et lire des enregistrements en BDD</a
+          >
+          <ol>
+            <li>
+              <a href="#mise-en-place">Mise en place</a>
+            </li>
+            <li>
+              <a href="#ajouter-une-histoire">Ajouter une histoire</a>
+            </li>
+            <li>
+              <a href="#lire-une-histoire">Lire une histoire</a>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </nav>
+
+    <main id="main">
+      <img
+        class="main-image"
+        src="assets/img/blaise.jpeg"
+        alt="PDO - PHP Data Objects"
+      />
+
+      <section class="no-background">
+        <h1 id="creer-et-lire-des-enregistrements-en-bdd">
+          Créer et lire des enregistrements en BDD
+        </h1>
+        <p class="alert-info">
+          Dans cet atelier, tu vas aider Père Blaise à écrire l’histoire des
+          chevaliers de la table ronde !<br />
+          Pour cela, tu vas récupérer et créer des informations en base de
+          données avec PHP et PDO !
+        </p>
+      </section>
+
+      <section>
+        <h2 id="mise-en-place">Mise en place</h2>
+        <p>
+          Connecte-toi à la base de données nommée
+          <code class="language-plaintext highlighter-rouge">kaamelott</code>
+          que tu as créée lors du précédent atelier (ou recrée-là si besoin).
+        </p>
+        <p>
+          En utilisant le client MySQL CLI (dans ton terminal), crée une table
+          <code class="language-plaintext highlighter-rouge">story</code>
+          contenant les champs suivants avec les types que tu juges appropriés.
+        </p>
+        <ul>
+          <li>
+            <code class="language-plaintext highlighter-rouge">id</code>
+            integer, clé primaire autoincrémentée
+          </li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">title</code>
+            chaîne, max 255 caractères
+          </li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">content</code>
+            texte
+          </li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">author</code>
+            chaîne, max 100 caractères
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="ajouter-une-histoire">Ajouter une histoire</h2>
+        <p>
+          Créer un fichier <em>create.php</em> contenant un formulaire HTML
+          permettant de renseigner chaque information d’une histoire (titre,
+          contenu, auteur).
+        </p>
+        <p>
+          À la soumission du formulaire dans <em>create.php</em>, insérer la
+          saisie de l’utilisateur en base de données grâce à PDO. Appuie-toi sur
+          l’utilisation de PDO que tu viens de voir, ainsi que ce que tu as déjà
+          fait auparavent :
+        </p>
+        <ul>
+          <li>
+            insertion en base de données à l’aide de SQL et manipulation de
+            formulaires HTML.
+          </li>
+          <li>sécuriser les entrées à l’aide des requêtes préparées de PDO</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="lire-une-histoire">Lire une histoire</h2>
+        <p>
+          Créer une page <em>index.php</em>, affichant la liste des histroires
+          contenus en base de données. Encore une fois, appuie-toi sur
+          l’utilisation de PDO que tu viens de voir, mais également sur ce que
+          tu as déjà fait auparavant&nbsp;:
+        </p>
+        <ul>
+          <li>
+            récupération en base de données et parcours de tableaux en PHP
+          </li>
+          <li>sécuriser l’affichage contre les failles XSS</li>
+        </ul>
+        <p class="text-center">
+          <img src="assets/img/blaise.gif" alt="blaise_malade" />
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
